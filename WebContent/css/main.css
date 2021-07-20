@@ -1,0 +1,628 @@
+* {
+    box-sizing: border-box;
+    margin: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-color: #3B4B60;
+    margin: 20px;
+    
+}
+
+.middle {
+
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #2E4350;
+    margin: px;
+    height:20%;
+}
+
+
+
+tr:nth-child(even) {
+    background-color: #283A46;
+
+}
+
+tbody:nth-child(even) {
+    background-color: #2A3E4C;
+}
+
+tr:hover {
+    background-color: #5e6d79;
+    cursor: pointer;
+    color: #d6d6d6;
+}
+
+
+
+.myTable tr:active {
+    background-color: #4f96bd;
+}
+
+tr {
+    color: #d6d6d6;
+    margin: auto;
+    text-align: left;
+}
+
+td,
+th {
+    padding: 12px 0px 12px 30px;
+}
+
+.tableheading th {
+    color: #899ba8;
+    font-size: 15px;
+    padding-top: 30px;
+    font-weight: 600;
+}
+
+
+.header {
+    padding: auto;
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+    margin-top: 12px;
+    margin-left: 12px;
+}
+
+
+
+.header-left {
+    float: left;
+}
+
+.header-center {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tab table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tab {
+    height: 100%;
+    background-color: #2D4350;
+}
+
+.bodyhead {
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(218, 218, 218);
+    margin-left: 12px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.operations {
+    float: right;
+    margin-top: 12px;
+    border-radius: 10px;
+}
+
+.operations button {
+    border: #97A1A9 solid 1px;
+    padding: 5px 10px 5px 10px;
+    margin: 8px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #d6d6d6;
+}
+
+
+
+.operations button:hover {
+    border: #97A1A9 solid 1px;
+    cursor: pointer;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    background-color: #305d74;
+    color: #d6d6d6;
+    transition: ease 0.2s;
+}
+
+
+.operations input[type="text"] {
+    background-color: transparent;
+    width: 250px;
+    border: 1px solid #356680;
+    border-right: none;
+    padding: 5px 10px 5px 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+    outline: none;
+    color: #9DBFAF;
+    background: url(/images/search-24px\ \(3\).svg)no-repeat 100%;
+}
+
+.checkbox input {
+    background-color: transparent;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: visible;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Black w/ opacity */
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgb(32, 32, 32);
+    margin: 2em 0;
+    padding: 0;
+  }
+
+.modal-content {
+
+    background-color: #2A3E4C;
+    margin: 5% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border-radius: 5px;
+    color: #d6d6d6;
+    width: 50%;
+    max-height: 100%;
+    overflow: auto;
+    /* Could be more or less, depending on screen size */
+}
+
+
+.modal-content label {
+    padding-right: 10px;
+    color: #97A1A9;
+    margin: 10px;
+}
+
+.btnadd {
+    color: #ffffff;
+    border: #0d1418 solid 1px;
+    background-color: #e2e2e296;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    margin: 10px;
+    float: right;
+
+}
+
+.btnadd:hover {
+    color: #ffffff;
+    cursor: pointer;
+    border: #2a414e solid 1px;
+    background-color: #305d74;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    margin: 10px;
+    transition: ease 0.2s;
+    float: right;
+
+}
+
+.btncancel {
+    color: #97A1A9;
+    background-color: transparent;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    float: left;
+
+    margin: 10px;
+}
+
+.btncancel:hover {
+    color: #97A1A9;
+    background-color: #d35050ce;
+    cursor: pointer;
+    transition: ease 0.2s;
+
+}
+
+
+.btnclear {
+    color: #d3d3d3;
+    border: #0d1418 solid 1px;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    background-color: transparent;
+    margin: 10px;
+    float: right;
+}
+
+.btnclear:hover {
+    cursor: pointer;
+    transition: ease 0.2s;
+    background-color: #d35050ce;
+
+}
+
+.modal-content input[type="text"] {
+    background-color: #283A46;
+    border: #356680 solid 1px;
+    border-radius: 2px;
+    color: #97A1A9;
+    margin: 20px;
+}
+
+
+.modal-content input:active[type="text"] {
+    background-color: #283A46;
+    border: #356680 solid 1px;
+    border-radius: 2px;
+    color: #97A1A9;
+    margin: 20px;
+}
+
+.modal-content input[type="date"] {
+    background-color: #283A46;
+    border: #356680 solid 1px;
+    border-radius: 2px;
+    color: #97A1A9;
+}
+
+.modal-content h1 {
+    margin-bottom: 50px;
+}
+
+
+.notes {
+    width: 300px;
+    height: 300px;
+}
+
+.modal-content textarea {
+    background-color: #283A46;
+    border: #356680 solid 1px;
+    border-radius: 2px;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.modaledit {
+    
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: visible;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Black w/ opacity */
+}
+
+.modal-contentedit {
+    animation:ease-in-out 1s;   
+    background-color: #2A3E4C;
+    margin: 5% auto;
+    max-height: 105%;
+    overflow: auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border-radius: 5px;
+    color: #d6d6d6;
+    width: 30%;
+    /* Could be more or less, depending on screen size */
+}
+
+
+.modal-contentedit label {
+    padding-right: 10px;
+    color: #97A1A9;
+    margin: 20px;
+}
+
+.editnotes input[type="text"] {
+    width: 300px;
+    height: 300px;
+}
+
+
+
+
+.editbtnadd {
+    color: #ffffff;
+    border: #0d1418 solid 1px;
+    background-color: #e2e2e296;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    margin: 10px;
+    float: right;
+
+}
+
+.editbtnadd:hover {
+    cursor: pointer;
+    background-color: #305d74;
+    transition: ease 0.2s;
+
+}
+
+.editbtncancel {
+    color: #97A1A9;
+    background-color: transparent;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    float: left;
+    margin: 10px;
+}
+
+.editbtncancel:hover {
+    background-color: #d35050ce;
+    cursor: pointer;
+    transition: ease 0.2s;
+
+
+}
+
+
+.editbtnclear {
+    color: #d3d3d3;
+    border: #0d1418 solid 1px;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    background-color: transparent;
+    margin: 10px;
+    float: right;
+
+}
+
+.editbtnclear:hover {
+    color: #d3d3d3;
+    border: #0d1418 solid 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px 5px 10px;
+    background-color: #d35050ce;
+    margin: 10px;
+
+}
+
+.modal-contentedit input[type="text"] {
+    background-color: #283A46;
+    border: #356680 solid 1px;
+    border-radius: 2px;
+    color: #97A1A9;
+    margin: 20px;
+}
+
+.modal-content textarea{
+    background-color: #283A46;
+    border: #356680 solid 1px;
+    border-radius: 2px;
+    color: #97A1A9;
+    margin: 20px;
+}
+
+.modal-contentedit textarea {
+    background-color: #283A46;
+    border: #356680 solid 1px;
+    border-radius: 2px;
+    color: #97A1A9;
+    margin: 20px;
+}
+
+.modal-contentedit h1 {
+    margin-bottom: 30px;
+}
+
+
+.pager-nav {
+    margin: 16px 0;
+}
+
+.pager-nav span {
+    display: inline-block;
+    padding: 4px 8px;
+    margin: 1px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #FFFFFF;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.pager-nav span:hover,
+.pager-nav .pg-selected {
+    background-color: #f9f9f9;
+    border: 1px solid #CCCCCC;
+}
+
+.closeimg {
+    background-color: transparent;
+    border: none;
+    float: right;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.closeimg:hover {
+    background-color: #305d74;
+    cursor: pointer;
+    transition: ease 0.2;
+
+}
+
+
+.modaldelete {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow:auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Black w/ opacity */
+}
+
+.modal-contentdelete {
+
+    background-color: #2A3E4C;
+    margin: 5% auto;
+    max-height: 105%;
+    overflow: auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border-radius: 5px;
+    color: #d6d6d6;
+    width: 30%;
+    /* Could be more or less, depending on screen size */
+}
+
+.deletebtn {
+    color: #ffffff;
+    border: #0d1418 solid 1px;
+    background-color: #399bc9bb;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    margin: 10px;
+    float: right;
+
+}
+
+.deletebtn:hover {
+    cursor: pointer;
+    background-color: #305d74;
+    transition: ease 0.2s;
+
+}
+
+.deletecancel {
+    color: #97A1A9;
+    background-color: transparent;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    float: left;
+    margin: 10px;
+}
+
+.deletecancel:hover {
+    background-color: #d35050ce;
+    cursor: pointer;
+    transition: ease 0.2s;
+
+
+}
+
+.modal-contentdelete h1{
+    margin-bottom: 30px;
+}
+.permdel{
+    color: rgb(231, 58, 27);
+}
+
+.bottompara{
+    margin-bottom: 30px;
+}
+
+.pageChange{
+    background-color: transparent;
+    border: none;
+    
+}
+
+.pageChange .pageNext{
+    background-color: #7bb4da;
+    border: none;
+    padding: 10px 12px 10px 12px;
+    border-radius: 100px;
+    top: 50%;
+    position:fixed;
+    left: 95%;
+}
+
+.pageChange .pagePrev{
+    background-color: #7bb4da;
+    border: none;
+    padding: 10px 12px 10px 12px;
+    border-radius: 100px;
+    top: 50%;
+    position:fixed;
+}
+
+.pageChange .pagePrev:hover{
+    background-color: #4f96bd;
+    transition: ease 0.2s;
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+
+.pageChange .pageNext:hover{
+    background-color: #4f96bd;
+    transition: ease 0.2s;
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.col {
+    flex-grow: 1;
+  }
+  .col-14{
+   flex-grow: 14; 
+  }
+  
+  .col-7{
+    flex-grow: 7;
+  }
+  .col-4 {
+    flex-grow: 4;
+  }
+  .col-8 {
+    flex-grow: 8;
+  }
+  .col-9 {
+   flex-grow: 9;
+  }
+
+  .selected {
+    background-color: brown;
+    color: #FFF;
+}

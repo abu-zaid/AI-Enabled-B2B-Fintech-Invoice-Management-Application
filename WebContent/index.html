@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<title>AI B2B Payment Date Prediction</title>
+<head>
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body onload="showTable()">
+  <div class="header">
+    <div class="header-left">
+      <a href="#"> <img src="images/Group 20399.svg" alt="ABC Products"
+          style="width:100%; height:auto; max-width:300px"></a>
+    </div><br>
+    <div class="header-center">
+      <a href="http://www.highradius.com"><img src="images/logo.svg" alt="HighRadius"
+          style="width:100%; height:auto; max-width:300px"> </a>
+    </div>
+  </div>
+  <div class="bodyhead">
+    <p>Invoice List</p>
+  </div>
+
+  <div class="operations">
+    <button id="myBtn" onclick="openForm()"><img src="images/Path 18189.svg" alt=""> Add</button>
+    <button id="editbtn" onclick="openFormEdit()"><img src="images/Path 18191.svg" alt="" style="width: 30%;"> Edit</button>
+    <button id="delete" onclick="openFormDelete()" ><img src="images/Path 18189-1.svg" style="margin-bottom: 4px;"
+    alt="" > Delete</button>
+    <input type="text" placeholder="Search by invoice number" pattern="^[0-9]*$" id="searchValue">
+    <button type="submit" class="searcButton" onclick="searchValue()"><img src="./images/search-24px (3).svg" style=""
+    alt="" ></button>
+  </div>
+
+
+  <div class="tab">
+    <table class="middle" id="middle">
+              
+      
+    </table>
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+  <div class="modaledit" id="myFormedit">
+    <div class="modal-contentedit">
+      <form action="" onsubmit="editform()" class="form-containeredit">
+        <h1>Edit Invoice
+          <button type="button" class="closeimg" onclick="closeFormEdit()"><img src="images/baseline-close-24px.svg"
+              alt=""></button>
+        </h1>
+        <hr>
+        <label for="cust_name"><b>Invoice Amount</b></label>
+        <input type="text" name="invoice_amount">
+        <br>
+        <label for="notes"><b>Notes</b></label>
+        <textarea name="editnotes" id="editnotes" cols="30" rows="5"></textarea> <br>
+        <hr>
+        <button type="submit" class="editbtnadd">Save</button>
+
+        <button type="reset" class="editbtnclear">Reset</button>
+        <button type="button" class="editbtncancel" onclick="closeFormEdit()">Cancel</button>
+
+      </form>
+    </div>
+  </div>
+
+
+  <div class="modaldelete" id="myFormdelete">
+    <div class="modal-contentdelete">
+      <form action="" onsubmit="deletefnc()" class="form-containerdelete">
+        <h1>Delete record(s)?
+          <button type="button" class="closeimg" onclick="closeFormDelete()"><img src="images/baseline-close-24px.svg"
+              alt=""></button>
+        </h1><hr>
+        <p class="bottompara">You'll lose your record(s) after this action. We can't recover <br> them once you deleted"</p>
+        <p>Are you sure you want to
+        <span class="permdel"> permanently delete</span>
+        <p>them?</p> <br> <br>
+        <hr>
+        <button type="submit" class="deletebtn" >Delete</button>
+        <button type="button" class="deletecancel" onclick="closeFormDelete()" >Cancel</button>
+      </form>
+    </div>
+  </div>
+
+
+
+ 
+<div class="modal" id="myForm">
+ <div class="modal-content" >
+<form action="" onsubmit="addRows()" class="form-container">
+<h1>Add Invoice
+<button type="button" class="closeimg" onclick="closeForm()"><img src="images/baseline-close-24px.svg" alt=""></button>
+</h1>
+<br>
+<label for="cust_name"><b>Customer Name*</b></label>
+    <input type="text" id="cust_name" required>
+<label for="due_date"><b>Due Date*</b></label>
+    <input type="date" id="due_date" required><br>
+<label for="cust_number"><b>Customer No.*</b></label>
+    <input type="text" pattern="^[0-9]*$" id="cust_number" required>  
+<label for="invoice_number"><b>Invoice No.*</b></label>
+    <input type="text"pattern="^[0-9]*$" id="invoice_number" required>
+
+<label for="invoice_amount"><b>Invoice Amount*</b></label>
+    <input type="text"pattern="^[0-9]*$" id="invoice_amount" required>
+
+<label for="notes"><b>Notes</b></label>
+    <input type="text"  id="notes">
+    <br>
+    <button type="reset" class="btnclear">Clear</button>
+    <button  type="submit" class="btnadd" >Add</button>
+    <button type="button" class="btncancel" onclick="closeForm()">Cancel</button>
+    
+</form>
+</div>
+</div>
+
+     
+
+
+  
+<div class="">
+  <div class="pageChange">
+<button class="pagePrev" onclick="showPrevPage()" id="preValue"><img src="images/left-arrow.png"  width="10px" alt=""></button>
+</div>
+  <div class="col-lg-2  col-md-2 col-xs-4 nav">
+</div>	
+<div class="pageChange">
+<button class="pageNext" onclick="showNextPage()" id="nextValue"><img src="images/right-arrow.png" width="10px" alt=""></button>
+</div>	
+</div>
+</body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+
+
+
+</html>
